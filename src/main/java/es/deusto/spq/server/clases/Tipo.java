@@ -18,6 +18,7 @@ public enum Tipo {
     DRAGON,
     SINIESTRO,
     ACERO,
+    SINGULAR,
     HADA;
 
    
