@@ -85,3 +85,5 @@ public class ExampleClient {
 		exampleClient.sayMessage(USER, PASSWORD, "This is a test!...");
 	}
 }
+
+
