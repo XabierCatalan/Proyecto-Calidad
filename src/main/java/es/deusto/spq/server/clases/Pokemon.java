@@ -10,6 +10,18 @@ public class Pokemon {
     private Tipo type2;
     private Region region;
 
+    public Pokemon() {
+        // Default constructor
+    }
+
+    public Pokemon(int pokedexNumber, String name, Tipo type1, Tipo type2, Region region) {
+        this.pokedexNumber = pokedexNumber;
+        this.name = name;
+        this.type1 = type1;
+        this.type2 = type2;
+        this.region = region;
+    }
+
     public int getPokedexNumber() {
         return pokedexNumber;
     }
