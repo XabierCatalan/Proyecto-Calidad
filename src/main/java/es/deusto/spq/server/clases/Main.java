@@ -60,10 +60,27 @@ public class Main {
 
         for (int i = 0; i < 3; i++) {
             int randomIndex = (int) (Math.random() * tipos.size());
+            int randomLista = (int) (Math.random() * 2);
             String tipo = tipos.get(randomIndex);
             arriba.add(tipo);
             tipos.remove(randomIndex);
+            if (randomLista == 0) {
+                int randomTipo = (int) (Math.random() * tipos.size());
+                String tipo1 = tipos.get(randomTipo);
+                lateral.add(tipo1);
+                tipos.remove(randomTipo);
+            } else {
+                int randomRegion = (int) (Math.random() * regiones.size());
+                String region = regiones.get(randomRegion);
+                lateral.add(region);
+                regiones.remove(randomRegion);
+            }
         }
+
+        System.err.println("Arriba: " + arriba);
+        System.err.println("Lateral: " + lateral);
+
+        
 
 
         
