@@ -1,4 +1,4 @@
-package es.deusto.spq.server.clases;
+package es.deusto.spq.model;
 
 public enum Tipo {
     NORMAL,

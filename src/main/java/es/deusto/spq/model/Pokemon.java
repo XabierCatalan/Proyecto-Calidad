@@ -1,6 +1,5 @@
-package es.deusto.spq.server.clases;
-import es.deusto.spq.server.clases.Region;
-import es.deusto.spq.server.clases.Tipo;
+package es.deusto.spq.model;
+
 
 
 public class Pokemon {
