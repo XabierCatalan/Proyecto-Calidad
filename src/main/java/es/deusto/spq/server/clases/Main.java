@@ -81,10 +81,15 @@ public class Main {
             }
         }
 
-        System.err.println("Arriba: " + arriba);
-        System.err.println("Lateral: " + lateral);
+        System.out.println("Arriba: " + arriba);
+        System.out.println("Lateral: " + lateral);
 
-        
+        for (String arribaElement : arriba) {
+            for (String lateralElement : lateral) {
+                //List<String> listaPokemons = obtenerLista(arribaElement, lateralElement);
+                //System.out.println(listaPokemons);
+            }
+        }
 
 
         
