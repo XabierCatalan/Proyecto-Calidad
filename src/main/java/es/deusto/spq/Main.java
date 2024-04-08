@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
         ServerSocket server = null;
         Socket sc = null;
@@ -159,9 +159,9 @@ public class Main {
         statement.close();
 
         return lista;
-    }*/
+    }
 }
-
+*/
 
 
 

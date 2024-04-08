@@ -1,3 +1,7 @@
+package es.deusto.spq.service;
+
+import java.util.ArrayList;
+
 public class JuegoService {
     public static void crearJuego() {
         ArrayList<String> tipos = new ArrayList<>();

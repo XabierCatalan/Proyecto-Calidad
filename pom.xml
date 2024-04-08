@@ -1,82 +1,73 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<groupId>org.datanucleus</groupId>
-	<artifactId>datanucleus-jersey-jdo-mysql</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>Jersey + Datanucleus + MySQL</name>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<properties>
-		<maven.compiler.release>8</maven.compiler.release>
-		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jersey.version>2.35</jersey.version>
-		<server.hostname>127.0.0.1</server.hostname>
-		<server.port>8080</server.port>
-	</properties>
+    <modelVersion>4.0.0</modelVersion>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>8.0.29</version>
-			</dependency>
-			<!-- Puedes agregar otras dependencias aquí -->
-		</dependencies>
-	</dependencyManagement>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.3</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
 
-	<dependencies>
-			<!-- Dependencia para Spring Boot Starter Web -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<version>2.6.4</version>
-		</dependency>
-		<!-- Dependencia para MySQL Connector/J -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.29</version>
-		</dependency>
-		<!-- Dependencia para Jersey -->
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>3.0.3</version>
-		</dependency>
-		<!-- Dependencia para Datanucleus JDO -->
-		<dependency>
-			<groupId>org.datanucleus</groupId>
-			<artifactId>datanucleus-api-jdo</artifactId>
-			<version>5.2.7</version>
-		</dependency>
-		<dependency>
-    		<groupId>javax.persistence</groupId>
-   			<artifactId>javax.persistence-api</artifactId>
-    		<version>2.2</version>
-		</dependency>
-		<dependency>
-    		<groupId>org.glassfish.jersey.core</groupId>
-    		<artifactId>jersey-server</artifactId>
-    		<version>3.0.3</version>
-		</dependency>
-		<dependency>
-    		<groupId>org.apache.commons</groupId>
-    		<artifactId>commons-lang3</artifactId>
-    		<version>3.12.0</version>
-		</dependency>
-	</dependencies>
+    <groupId>com.example</groupId>
+    <artifactId>PSC-G14</artifactId>
+    <version>1.0.0</version>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- AquÃ­ puedes agregar las dependencias de tu proyecto -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- Dependecias para la DB -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-community-dialects</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.25.2</version>
+        </dependency>
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
